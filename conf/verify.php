@@ -44,8 +44,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 //$_SESSION["email"] = $row['email_add']; 
 
             	//$sql=mysqli_query($con,"INSERT INTO `logs`(`user_id`, `log_name`) VALUES ('".$_SESSION["id"]."','login')" );
-
-                                    
+				$_SESSION["department"] = $row['office_id']; 
+				                                    
                  header("location: ../app/");
 		        exit();
             }else{

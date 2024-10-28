@@ -214,22 +214,22 @@
                                          $id=$row['employee_id'];
                                          ?>
                                 <tr>
-                                    <td><?php echo $count; ?></td>
-                                    <td><?php echo $row['firstname']; ?></td>
-                                    <td><?php echo $row['lastname']; ?></td>
-                                    <td><?php echo $row['emp_contact_no']; ?></td>
-                                    <td><?php echo $row['emp_email_add']; ?></td>
-                                    <td><?php echo $row['position']; ?></td>
-                                    <td><?php echo $row['office']; ?></td>
-                                    <td><?php echo $row['role']; ?></td>
+                                    <td><?= $count; ?></td>
+                                    <td><?= $row['firstname']; ?></td>
+                                    <td><?= $row['lastname']; ?></td>
+                                    <td><?= $row['emp_contact_no']; ?></td>
+                                    <td><?= $row['emp_email_add']; ?></td>
+                                    <td><?= $row['position']; ?></td>
+                                    <td><?= $row['office']; ?></td>
+                                    <td><?= $row['role']; ?></td>
                                     <td style='width: 100px;'>
                                         <a href="index.php?page=employee-edit&& id=<?php echo $id; ?>"
                                             class=" btn btn-sm btn-info">
                                             <i class="fas fa-solid fa-pen"></i>
                                         </a>
 
-                                        <a onclick="delete_employee('<?php echo $id; ?>')"
-                                            class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i></a>
+                                        <a onclick="delete_data('<?php echo $id; ?>')" class=" btn btn-sm btn-danger">
+                                            <i class="fas fa-solid fa-trash"></i>Delete</a>
                                     </td>
 
                                 </tr>
@@ -260,7 +260,7 @@
 <!-- /.content-wrapper -->
 
 <script>
-function delete_employee(data_id) {
+function delete_data(data_id) {
     // alert('ok');
     //window.location = ("action/admin/delete-employee.php?id=" + data_id);
     Swal.fire({
